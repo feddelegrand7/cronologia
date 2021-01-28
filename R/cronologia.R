@@ -39,7 +39,7 @@ timeline <- function(df,
         htmltools::tagList(
 
           htmltools::div(
-            class = "detail-wrapper",
+            class = "chronologia-detail-wrapper",
 
             htmltools::tags$details(
 
@@ -72,7 +72,7 @@ timeline <- function(df,
     return(
 
       htmltools::tagList(
-        htmltools::div(class = "wrapper", r)
+        htmltools::div(class = "chronologia-wrapper", r)
       )
     )
 
@@ -92,6 +92,20 @@ timeline <- function(df,
 #'
 #' @return
 #' @export
+#'
+#' if(interactive()) {
+
+
+
+
+
+
+
+
+
+
+
+#'}
 #'
 #' @examples
 
