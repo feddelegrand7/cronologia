@@ -16,19 +16,21 @@ create_tml(
 )
 }
 \arguments{
-\item{df}{a data frame containing the necessary information}
+\item{df}{a data frame containing the necessary information.}
 
-\item{smr}{the column that will be used as the summary component}
+\item{smr}{the column name that will be used as the summary component.}
 
-\item{dsc}{the column that will be used as the description component}
+\item{dsc}{the column name that will be used as the description component.}
 
-\item{smr_col}{text color for the summary component. Defaults to 'white'}
+\item{smr_col}{text color for the summary component. Defaults to 'white'.}
 
-\item{smr_bgcol}{background-color for the summary component. Defaults to "#002240"}
+\item{smr_bgcol}{background-color for the summary component. Defaults to "#002240".}
 
-\item{dsc_col}{text color for the description component. Defaults to "#1D1D1D"}
+\item{dsc_col}{text color for the description component. Defaults to "#1D1D1D".}
 
-\item{dsc_bgcol}{background-color for the description component. Defaults to "#FFFFFF"}
+\item{dsc_bgcol}{background-color for the description component. Defaults to "#FFFFFF".}
+
+\item{dsc_size}{font size of the description component. Defaults to "14px".}
 }
 \value{
 A Vertical HTML Time Line Widget

@@ -14,16 +14,67 @@ create_tml_img(
   smr_bgcol = "#002240",
   dsc_col = "#1D1D1D",
   dsc_bgcol = "#FFFFFF",
+  dsc_size = "14px",
   imgheight = "150px",
   imgwidth = "150px"
 )
 }
 \arguments{
-\item{imgwidth}{}
+\item{df}{a data frame containing the necessary information.}
+
+\item{smr}{the column name that will be used as the summary component.}
+
+\item{dsc}{the column name that will be used as the description component.}
+
+\item{smr_col}{text color for the summary component. Defaults to 'white'.}
+
+\item{smr_bgcol}{background-color for the summary component. Defaults to "#002240".}
+
+\item{dsc_col}{text color for the description component. Defaults to "#1D1D1D".}
+
+\item{dsc_bgcol}{background-color for the description component. Defaults to "#FFFFFF".}
+
+\item{dsc_size}{font size of the description component. Defaults to "14px".}
+
+\item{imgheight}{the height of the image. Defaults to "150px".}
+
+\item{imgwidth}{the width of the image. Defaults to "150px".}
+
+\item{imagesrc}{the column name indicating the 'href' source of the images.}
+
+\item{imageal}{the column name that will be used as 'alt' text for the images.}
 }
 \value{
-
+A Vertical HTML Time Line Widget With Images
 }
 \description{
 Title
+}
+\examples{
+
+if (interactive()) {
+library(shiny)
+library(cronologia)
+
+df <- radous::get_data(4)
+
+ui <- fluidPage(
+
+
+ create_tml_img(df,
+                smr = "name_last",
+                dsc = "location_street_name",
+                imgsrc = "picture_large",
+                imgalt = "name_last",
+                imgwidth = "150px",
+                imgheight = "150px",
+                dsc_size = "20px")
+
+)
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+
+}
 }

@@ -78,13 +78,14 @@ timeline <- function(df,
 
 #' Create a Vertical Time Line
 #'
-#' @param df a data frame containing the necessary information
-#' @param smr the column that will be used as the summary component
-#' @param dsc the column that will be used as the description component
-#' @param smr_col text color for the summary component. Defaults to 'white'
-#' @param smr_bgcol background-color for the summary component. Defaults to "#002240"
-#' @param dsc_col text color for the description component. Defaults to "#1D1D1D"
-#' @param dsc_bgcol background-color for the description component. Defaults to "#FFFFFF"
+#' @param df a data frame containing the necessary information.
+#' @param smr the column name that will be used as the summary component.
+#' @param dsc the column name that will be used as the description component.
+#' @param smr_col text color for the summary component. Defaults to 'white'.
+#' @param smr_bgcol background-color for the summary component. Defaults to "#002240".
+#' @param dsc_col text color for the description component. Defaults to "#1D1D1D".
+#' @param dsc_bgcol background-color for the description component. Defaults to "#FFFFFF".
+#' @param dsc_size font size of the description component. Defaults to "14px".
 #'
 #' @return A Vertical HTML Time Line Widget
 #' @export
@@ -138,6 +139,19 @@ create_tml <- function(df,
                        dsc_bgcol = "#FFFFFF",
                        dsc_size = "14px"
                       ) {
+
+  if (any(!is.character(smr),
+          !is.character(dsc),
+          !is.character(smr_col),
+          !is.character(smr_bgcol),
+          !is.character(dsc_col),
+          !is.character(dsc_bgcol),
+          !is.character(dsc_size))) {
+
+
+    stop("All parameters except 'df' must be provided as a character string ! you're not in Tidyverse !!!")
+
+  }
 
 
   htmltools::tagList(
@@ -241,23 +255,49 @@ timeline_img <- function(df,
 
 #' Title
 #'
-#' @param df
-#' @param smr
-#' @param dsc
-#' @param imgsrc
-#' @param imgalt
-#' @param smr_col
-#' @param smr_bgcol
-#' @param dsc_col
-#' @param dsc_bgcol
-#' @param imgheight
-#' @param imgwidth
+#' @param df a data frame containing the necessary information.
+#' @param smr the column name that will be used as the summary component.
+#' @param dsc the column name that will be used as the description component.
+#' @param imagesrc the column name indicating the 'href' source of the images.
+#' @param imageal the column name that will be used as 'alt' text for the images.
+#' @param smr_col text color for the summary component. Defaults to 'white'.
+#' @param smr_bgcol background-color for the summary component. Defaults to "#002240".
+#' @param dsc_col text color for the description component. Defaults to "#1D1D1D".
+#' @param dsc_bgcol background-color for the description component. Defaults to "#FFFFFF".
+#' @param dsc_size font size of the description component. Defaults to "14px".
+#' @param imgheight the height of the image. Defaults to "150px".
+#' @param imgwidth the width of the image. Defaults to "150px".
 #'
-#' @return
+#' @return A Vertical HTML Time Line Widget With Images
 #' @export
 #'
 #' @examples
-
+#'
+#' if (interactive()) {
+#'library(shiny)
+#'library(cronologia)
+#'
+#'df <- radous::get_data(4)
+#'
+#'ui <- fluidPage(
+#'
+#'
+#'  create_tml_img(df,
+#'                 smr = "name_last",
+#'                 dsc = "location_street_name",
+#'                 imgsrc = "picture_large",
+#'                 imgalt = "name_last",
+#'                 imgwidth = "150px",
+#'                 imgheight = "150px",
+#'                 dsc_size = "20px")
+#'
+#')
+#'
+#'server <- function(input, output) {}
+#'
+#'shinyApp(ui = ui, server = server)
+#'
+#' }
 
 create_tml_img <- function(df,
                        smr,
@@ -271,6 +311,24 @@ create_tml_img <- function(df,
                        dsc_size = "14px",
                        imgheight = "150px",
                        imgwidth = "150px") {
+
+
+  if (any(!is.character(smr),
+          !is.character(dsc),
+          !is.character(imgsrc),
+          !is.character(imgalt),
+          !is.character(smr_col),
+          !is.character(smr_bgcol),
+          !is.character(dsc_col),
+          !is.character(dsc_bgcol),
+          !is.character(dsc_size),
+          !is.character(imgheight),
+          !is.character(imgwidth))) {
+
+
+    stop("All parameters except 'df' must be provided as a character string ! you're not in Tidyverse !!!")
+
+  }
 
 
   htmltools::tagList(
