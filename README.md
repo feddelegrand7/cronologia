@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `cronologia` is to create an interactive time line widget in
+The goal of `cronologia` is to create an interactive timeline widget in
 RMarkdown documents and Shiny applications.
 
 ## Installation
@@ -52,7 +52,7 @@ batman_data
 #> 3 July 16, 2012  The Dark Knight Rises
 ```
 
-Now, using `create_tml()`, we can create easily a time line as follows:
+Now, using `create_tml()`, we can create easily a timeline as follows:
 
 ``` r
 library(cronologia)
@@ -88,7 +88,7 @@ create_tml(df = batman_data,
 
 ## `create_tml_img()`
 
-If you want to include images within your time line, you can use the
+If you want to include images within your timeline, you can use the
 `create_tml_img()` function. To illustrate this function, we’ll use the
 [radous](https://github.com/feddelegrand7/radous) package that fetch the
 [randomuser.me](https://randomuser.me/) API returns and returns a data
@@ -102,9 +102,8 @@ library(radous)
 
 
 df <- get_data(n = 4, seed = "123")
-#> Request failed [503]. Retrying in 1.5 seconds...
-#> Request failed [503]. Retrying in 2.6 seconds...
-#> Request failed [503]. Retrying in 6.3 seconds...
+#> Request failed [503]. Retrying in 1 seconds...
+#> Request failed [503]. Retrying in 1 seconds...
 
 
 df[c('name_last', 

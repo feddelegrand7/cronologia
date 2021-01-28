@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `cronologia` is to create an interactive time line widget in RMarkdown documents and Shiny applications. 
+The goal of `cronologia` is to create an interactive timeline widget in RMarkdown documents and Shiny applications. 
 
 ## Installation
 
@@ -63,7 +63,7 @@ batman_data
 
 
 
-Now, using `create_tml()`, we can create easily a time line as follows: 
+Now, using `create_tml()`, we can create easily a timeline as follows: 
 
 
 ```{r, eval=FALSE}
@@ -107,7 +107,7 @@ create_tml(df = batman_data,
 ## `create_tml_img()`
 
 
-If you want to include images within your time line, you can use the `create_tml_img()` function. To illustrate this function, we'll use the [radous](https://github.com/feddelegrand7/radous) package that fetch the [randomuser.me](https://randomuser.me/) API returns and returns a data frame that contains many information (including images' URLs).
+If you want to include images within your timeline, you can use the `create_tml_img()` function. To illustrate this function, we'll use the [radous](https://github.com/feddelegrand7/radous) package that fetch the [randomuser.me](https://randomuser.me/) API returns and returns a data frame that contains many information (including images' URLs).
 
 > Disclaimer: All the generated images are extracted from the authorized section of UI Faces. 
 

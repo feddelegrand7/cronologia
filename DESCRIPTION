@@ -1,10 +1,10 @@
 Package: cronologia
 Type: Package
-Title: Create an HTML Vertical Time Line from a Data Frame in 'rmarkdown' and 'shiny'
+Title: Create an HTML Vertical Timeline from a Data Frame in 'rmarkdown' and 'shiny'
 Version: 0.1.0
 Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
-Description: Creates an HTML vertical time line from a data frame as an input for
+Description: Creates an HTML vertical timeline from a data frame as an input for
     'rmarkdown' documents and 'shiny' applications.
 License: GPL (>= 3)
 Encoding: UTF-8
