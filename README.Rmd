@@ -150,6 +150,10 @@ create_tml_img(df,
 ![](man/figures/example3.gif)
 
 
+# TODOS 
+
+- Writing unit tests 
+- Creating a hex sticker 
 
 
 

@@ -139,6 +139,11 @@ create_tml_img(df,
 
 ![](man/figures/example3.gif)
 
+# TODOS
+
+-   Writing unit tests
+-   Creating a hex sticker
+
 # Code of Conduct
 
 Please note that the `cronologia` project is released with a
