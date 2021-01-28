@@ -110,7 +110,14 @@ details[open] summary {
 
   font-weight: bolder;
 
-  font-size: 14px;
+  font-size: 16px;
 
+
+}
+
+
+.chronologia-detail-wrapper details img {
+
+  border-radius: 20px;
 
 }
