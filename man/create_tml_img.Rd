@@ -26,6 +26,10 @@ create_tml_img(
 
 \item{dsc}{the column name that will be used as the description component.}
 
+\item{imgsrc}{the column name indicating the 'href' source of the images.}
+
+\item{imgalt}{the column name that will be used as 'alt' text for the images.}
+
 \item{smr_col}{text color for the summary component. Defaults to 'white'.}
 
 \item{smr_bgcol}{background-color for the summary component. Defaults to "#002240".}
@@ -39,42 +43,10 @@ create_tml_img(
 \item{imgheight}{the height of the image. Defaults to "150px".}
 
 \item{imgwidth}{the width of the image. Defaults to "150px".}
-
-\item{imagesrc}{the column name indicating the 'href' source of the images.}
-
-\item{imageal}{the column name that will be used as 'alt' text for the images.}
 }
 \value{
 A Vertical HTML Time Line Widget With Images
 }
 \description{
 Create Vertical HTML Timeline Widget with Images from a Data Frame
-}
-\examples{
-
-if (interactive()) {
-library(shiny)
-library(cronologia)
-
-df <- radous::get_data(4)
-
-ui <- fluidPage(
-
-
- create_tml_img(df,
-                smr = "name_last",
-                dsc = "location_street_name",
-                imgsrc = "picture_large",
-                imgalt = "name_last",
-                imgwidth = "150px",
-                imgheight = "150px",
-                dsc_size = "20px")
-
-)
-
-server <- function(input, output) {}
-
-shinyApp(ui = ui, server = server)
-
-}
 }

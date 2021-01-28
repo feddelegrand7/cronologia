@@ -42,9 +42,6 @@ Create a Vertical HTML Timeline from a Data Frame
 
 if(interactive()) {
 
-library(shiny)
-library(cronologia)
-
 df <- data.frame(
 
 

@@ -97,9 +97,6 @@ timeline <- function(df,
 #'
 #' if(interactive()) {
 #'
-#' library(shiny)
-#' library(cronologia)
-#'
 #'df <- data.frame(
 #'
 #'
@@ -285,8 +282,8 @@ timeline_img <- function(df,
 #' @param df a data frame containing the necessary information.
 #' @param smr the column name that will be used as the summary component.
 #' @param dsc the column name that will be used as the description component.
-#' @param imagesrc the column name indicating the 'href' source of the images.
-#' @param imageal the column name that will be used as 'alt' text for the images.
+#' @param imgsrc the column name indicating the 'href' source of the images.
+#' @param imgalt the column name that will be used as 'alt' text for the images.
 #' @param smr_col text color for the summary component. Defaults to 'white'.
 #' @param smr_bgcol background-color for the summary component. Defaults to "#002240".
 #' @param dsc_col text color for the description component. Defaults to "#1D1D1D".
@@ -297,34 +294,7 @@ timeline_img <- function(df,
 #'
 #' @return A Vertical HTML Time Line Widget With Images
 #' @export
-#'
-#' @examples
-#'
-#' if (interactive()) {
-#'library(shiny)
-#'library(cronologia)
-#'
-#'df <- radous::get_data(4)
-#'
-#'ui <- fluidPage(
-#'
-#'
-#'  create_tml_img(df,
-#'                 smr = "name_last",
-#'                 dsc = "location_street_name",
-#'                 imgsrc = "picture_large",
-#'                 imgalt = "name_last",
-#'                 imgwidth = "150px",
-#'                 imgheight = "150px",
-#'                 dsc_size = "20px")
-#'
-#')
-#'
-#'server <- function(input, output) {}
-#'
-#'shinyApp(ui = ui, server = server)
-#'
-#' }
+
 
 create_tml_img <- function(df,
                        smr,
