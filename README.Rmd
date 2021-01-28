@@ -112,13 +112,10 @@ If you want to include images within your timeline, you can use the `create_tml_
 > Disclaimer: All the generated images are extracted from the authorized section of UI Faces. 
 
 
-```{r}
-
+```{r, message=FALSE, warning=FALSE}
 library(radous)
 
-
 df <- get_data(n = 4, seed = "123")
-
 
 df[c('name_last', 
      'location_street_name',
