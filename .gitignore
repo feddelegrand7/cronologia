@@ -5,3 +5,6 @@
 .Rdata
 .httr-oauth
 .DS_Store
+man/figures/example1.gif
+man/figures/example2.gif
+man/figures/example3.gif

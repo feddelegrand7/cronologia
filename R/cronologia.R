@@ -157,6 +157,23 @@ create_tml <- function(df,
   }
 
 
+  if(any(!c(smr, dsc) %in% names(df))) {
+
+    stop(glue::glue(
+
+      "Please check the columns' names.
+
+      Note that they need to be provided as a character string in this form:
+
+      (df = mtcars, smr = 'mpg', dsc = 'wt')
+
+      "
+
+    ))
+
+  }
+
+
   htmltools::tagList(
 
     cronologia_dependency(),
@@ -222,6 +239,8 @@ timeline_img <- function(df,
             height = imgheight,
             width = imgwidth
           ),
+
+          br(),
 
           htmltools::tags$p(
             j,
@@ -332,6 +351,23 @@ create_tml_img <- function(df,
 
 
     stop("All parameters except 'df' must be provided as a character string ! you're not in Tidyverse !!!")
+
+  }
+
+
+  if(any(!c(smr, dsc, imgsrc, imgalt) %in% names(df))) {
+
+    stop(glue::glue(
+
+      "Please check the columns' names.
+
+      Note that they need to be provided as a character string in this form:
+
+      (df = mtcars, smr = 'mpg', dsc = 'wt', imgsrc = 'disp', imgalt = 'drat')
+
+      "
+
+    ))
 
   }
 
