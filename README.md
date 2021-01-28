@@ -88,8 +88,6 @@ create_tml(df = batman_data,
 
 ## `create_tml_img()`
 
-![](man/figures/example3.gif)
-
 If you want to include images within your timeline, you can use the
 `create_tml_img()` function. To illustrate this function, we’ll use the
 [radous](https://github.com/feddelegrand7/radous) package that fetch the
@@ -138,6 +136,8 @@ create_tml_img(df,
                imgheight = "150px", 
                dsc_size = "20px")
 ```
+
+![](man/figures/example3.gif)
 
 # Code of Conduct
 

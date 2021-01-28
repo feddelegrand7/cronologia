@@ -3,3 +3,6 @@
 ^LICENSE\.md$
 ^README\.Rmd$
 ^CODE_OF_CONDUCT\.md$
+^man/figures/example1\.gif$
+^man/figures/example2\.gif$
+^man/figures/example3\.gif$

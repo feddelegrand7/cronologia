@@ -106,7 +106,6 @@ create_tml(df = batman_data,
 
 ## `create_tml_img()`
 
-![](man/figures/example3.gif)
 
 
 
@@ -148,6 +147,7 @@ create_tml_img(df,
 ```
 
 
+![](man/figures/example3.gif)
 
 
 
