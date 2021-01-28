@@ -4,6 +4,8 @@
 # cronologia
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/feddelegrand7/cronologia/workflows/R-CMD-check/badge.svg)](https://github.com/feddelegrand7/cronologia/actions)
 <!-- badges: end -->
 
 The goal of `cronologia` is to create an interactive timeline widget in
