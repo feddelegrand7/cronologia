@@ -103,7 +103,6 @@ library(radous)
 
 df <- get_data(n = 4, seed = "123")
 #> Request failed [503]. Retrying in 1 seconds...
-#> Request failed [503]. Retrying in 1 seconds...
 
 
 df[c('name_last', 

@@ -147,9 +147,9 @@ create_tml_img(df,
 
 ```
 
-
-
 ![](man/figures/example3.gif)
+
+
 
 
 
