@@ -6,15 +6,16 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of cronologia is to …
+The goal of `cronologia` is to create an interactive time line widget in
+RMarkdown documents and Shiny applications.
 
 ## Installation
 
-You can install the released version of cronologia from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the development version of `cronologia` from Github
+with:
 
 ``` r
-install.packages("cronologia")
+remotes::install_github("feddelegrand7/cronologia")
 ```
 
 ## Code of Conduct
