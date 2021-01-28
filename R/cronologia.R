@@ -97,6 +97,9 @@ timeline <- function(df,
 #'
 #' if(interactive()) {
 #'
+#' library(shiny)
+#' library(cronologia)
+#'
 #'df <- data.frame(
 #'
 #'
@@ -240,7 +243,7 @@ timeline_img <- function(df,
             width = imgwidth
           ),
 
-          br(),
+          htmltools::tags$br(),
 
           htmltools::tags$p(
             j,
