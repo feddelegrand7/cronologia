@@ -1,5 +1,6 @@
 
-
+#' An internal function used to manage the CSS file dependency
+#' @noRd
 cronologia_dependency <- function() {
 
   htmltools::htmlDependency(
@@ -20,6 +21,8 @@ cronologia_dependency <- function() {
 
 }
 
+#' An internal function used to generate HTML tags for the timeline function
+#' @noRd
 timeline <- function(df,
                      smr,
                      dsc,
@@ -76,7 +79,7 @@ timeline <- function(df,
 }
 
 
-#' Create a Vertical Time Line
+#' Create a Vertical HTML Time Line
 #'
 #' @param df a data frame containing the necessary information.
 #' @param smr the column name that will be used as the summary component.
@@ -176,6 +179,8 @@ create_tml <- function(df,
 # Create Time Line with Images --------------------------------------------
 
 
+#' An internal function used to create HTML tags for the timeline_img function
+#' @noRd
 timeline_img <- function(df,
                      smr,
                      dsc,
@@ -253,7 +258,7 @@ timeline_img <- function(df,
 
 
 
-#' Title
+#' Create Vertical HTML Time Line Widget With Images
 #'
 #' @param df a data frame containing the necessary information.
 #' @param smr the column name that will be used as the summary component.
