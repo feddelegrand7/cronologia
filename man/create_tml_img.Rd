@@ -2,7 +2,7 @@
 % Please edit documentation in R/cronologia.R
 \name{create_tml_img}
 \alias{create_tml_img}
-\title{Create Vertical HTML Time Line Widget With Images}
+\title{Create Vertical HTML Time Line Widget with Images from a Data Frame}
 \usage{
 create_tml_img(
   df,
@@ -48,7 +48,7 @@ create_tml_img(
 A Vertical HTML Time Line Widget With Images
 }
 \description{
-Create Vertical HTML Time Line Widget With Images
+Create Vertical HTML Time Line Widget with Images from a Data Frame
 }
 \examples{
 

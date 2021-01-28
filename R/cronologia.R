@@ -79,7 +79,7 @@ timeline <- function(df,
 }
 
 
-#' Create a Vertical HTML Time Line
+#' Create a Vertical HTML Time Line from a Data Frame
 #'
 #' @param df a data frame containing the necessary information.
 #' @param smr the column name that will be used as the summary component.
@@ -258,7 +258,7 @@ timeline_img <- function(df,
 
 
 
-#' Create Vertical HTML Time Line Widget With Images
+#' Create Vertical HTML Time Line Widget with Images from a Data Frame
 #'
 #' @param df a data frame containing the necessary information.
 #' @param smr the column name that will be used as the summary component.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/cronologia.R
 \name{create_tml}
 \alias{create_tml}
-\title{Create a Vertical HTML Time Line}
+\title{Create a Vertical HTML Time Line from a Data Frame}
 \usage{
 create_tml(
   df,
@@ -36,7 +36,7 @@ create_tml(
 A Vertical HTML Time Line Widget
 }
 \description{
-Create a Vertical HTML Time Line
+Create a Vertical HTML Time Line from a Data Frame
 }
 \examples{
 
