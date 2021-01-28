@@ -1,0 +1,107 @@
+
+
+.wrapper {
+
+  width: 50vw;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  line-height: 1.5;
+
+  font-family: 'Montserrat';
+
+  position: relative;
+
+}
+
+
+.detail-wrapper {
+
+  width: 100%;
+
+  margin-bottom: 100px;
+
+  display: flex;
+
+}
+
+details {
+
+  width: 50%;
+
+}
+
+
+summary {
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  background-color: rgb(43, 43, 43);
+
+  color: white;
+
+  padding: 15px;
+
+  margin-bottom: 15px;
+
+  border-radius: 5px;
+
+  text-align: left;
+
+  transition: all 0.5s ease-in-out;
+
+  cursor: pointer;
+
+  outline-color: #324C63;
+
+}
+
+
+details[open] summary {
+
+  margin-bottom: 25px;
+
+}
+
+
+
+
+.wrapper > .detail-wrapper:nth-child(even) {
+
+  justify-content: flex-end;
+
+  padding-left: 100px;
+
+}
+
+
+.wrapper > .detail-wrapper:not(:nth-child(even)) {
+
+  justify-content: flex-start;
+
+  padding-right: 100px;
+
+}
+
+
+.detail-wrapper::before {
+
+  content: "";
+
+  width: 3px;
+
+  background-color: #d9d9d9;
+
+  position: absolute;
+
+  top: 0;
+
+  bottom: 0;
+
+  left: 50%;
+
+}
