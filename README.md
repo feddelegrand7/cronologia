@@ -90,9 +90,9 @@ create_tml(df = batman_data,
 
 If you want to include images within your time line, you can use the
 `create_tml_img()` function. To illustrate this function, we’ll use the
-`radous` package that fetch the [randomuser.me](https://randomuser.me/)
-API returns and returns a data frame that contains many informations
-(including images’ URLs).
+[radous](https://github.com/feddelegrand7/radous) package that fetch the
+[randomuser.me](https://randomuser.me/) API returns and returns a data
+frame that contains many information (including images’ URLs).
 
 > Disclaimer: All the generated images are extracted from the authorized
 > section of UI Faces.
@@ -102,6 +102,9 @@ library(radous)
 
 
 df <- get_data(n = 4, seed = "123")
+#> Request failed [503]. Retrying in 1.5 seconds...
+#> Request failed [503]. Retrying in 2.6 seconds...
+#> Request failed [503]. Retrying in 6.3 seconds...
 
 
 df[c('name_last', 
