@@ -7,3 +7,4 @@
 ^man/figures/example2\.gif$
 ^man/figures/example3\.gif$
 ^\.github$
+^codecov\.yml$

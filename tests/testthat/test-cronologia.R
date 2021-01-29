@@ -171,3 +171,54 @@ test_that("create_tml_img() returns an object of type list", {
 
 
 })
+
+
+test_that("create_tml() returns an error when arguments missing", {
+
+
+
+
+  expect_error(
+
+    create_tml(mtcars, smr = "mpg")
+
+  )
+
+  expect_error(
+
+    create_tml(smr = "mpg", dsc = "wt")
+
+  )
+
+
+
+
+})
+
+
+test_that("create_tml_img() returns an error when arguments missing", {
+
+
+
+
+  expect_error(
+
+    create_tml_img(mtcars,
+                   smr = "mpg",
+                   dsc = "wt",
+                   imgalt = "disp")
+
+  )
+
+  expect_error(
+
+    create_tml_img(mtcars,
+                   smr = "mpg",
+                   dsc = "wt",
+                   imgsrc = "disp")
+  )
+
+
+
+
+})
