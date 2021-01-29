@@ -364,3 +364,180 @@ create_tml_img <- function(df,
   )
 
 }
+
+
+
+# cronologia The Dark Knight ------------------------------------------------------------
+
+
+
+
+#' An internal function used to generate HTML tags for the timeline function
+#' @noRd
+
+timeline2 <- function(df,
+                     smr,
+                     dsc,
+                     dsc2,
+                     smr_col,
+                     smr_bgcol,
+                     dsc_col,
+                     dsc_bgcol,
+                     dsc_size,
+                     dsc_col2,
+                     dsc_bgcol2,
+                     dsc_size2) {
+
+  func <- function(i, j, k) {
+
+
+    htmltools::tagList(
+
+      htmltools::div(
+        class = "chronologia-detail-wrapper",
+
+        htmltools::tags$details(
+
+          htmltools::tags$summary(
+            i,
+            style = glue::glue(
+
+              "color: {smr_col}; background: {smr_bgcol};"
+
+            )
+          ),
+
+          htmltools::tags$p(
+            j,
+
+            style = glue::glue(
+
+              "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+            )
+
+          ),
+
+
+          htmltools::tags$p(
+
+            k,
+
+            style = glue::glue(
+
+              "color: {dsc_col2}; background: {dsc_bgcol2}; font-size: {dsc_size2};"
+
+            )
+
+
+          )
+        )
+      )
+    )
+  }
+
+  r <- mapply(func, df[[smr]], df[[dsc]], df[[dsc2]], SIMPLIFY = FALSE)
+
+  return(
+
+    htmltools::tagList(
+      htmltools::div(class = "chronologia-wrapper", r)
+    )
+  )
+
+
+}
+
+
+#' Create a Vertical HTML Timeline with 2 Description Levels from a Data Frame
+#'
+#' @param df a data frame containing the necessary information.
+#' @param smr the column name that will be used as the summary component.
+#' @param dsc the column name that will be used as the first description component.
+#' @param dsc2 the column name that will be used as the second description component.
+#' @param smr_col text color for the summary component. Defaults to 'white'.
+#' @param smr_bgcol background-color for the summary component. Defaults to "#002240".
+#' @param dsc_col text color for the first description component. Defaults to "#1D1D1D".
+#' @param dsc_bgcol background-color for the first description component. Defaults to "#FFFFFF".
+#' @param dsc_size font size of the first description component. Defaults to "14px".
+#' @param dsc_col2 text color for the second description component. Defaults to "#3AD900".
+#' @param dsc_bgcol2 background-color for the second description component. Defaults to "#FFFFFF".
+#' @param dsc_size2 font size of the second description component. Defaults to "14px".
+#' @return A Vertical HTML Time Line Widget with 2 Description Levels
+#' @export
+#'
+#' @examples
+#'
+#'}
+
+
+create_tml_2 <- function(df,
+                       smr,
+                       dsc,
+                       dsc2,
+                       smr_col = "white",
+                       smr_bgcol =  "#002240",
+                       dsc_col = "#1D1D1D",
+                       dsc_bgcol = "#FFFFFF",
+                       dsc_size = "14px",
+                       dsc_col2 = "#3AD900",
+                       dsc_bgcol2 = "#FFFFFF",
+                       dsc_size2 = "14px") {
+
+  if (any(!is.character(smr),
+          !is.character(dsc),
+          !is.character(dsc2),
+          !is.character(smr_col),
+          !is.character(smr_bgcol),
+          !is.character(dsc_col),
+          !is.character(dsc_bgcol),
+          !is.character(dsc_size),
+          !is.character(dsc_col2),
+          !is.character(dsc_bgcol2),
+          !is.character(dsc_size2))) {
+
+
+    stop("All parameters except 'df' must be provided as a character string ! you're not in Tidyverse !!!")
+
+  }
+
+
+  if(any(!c(smr, dsc, dsc2) %in% names(df))) {
+
+    stop(glue::glue(
+
+      "Please check the columns' names.
+
+      Note that they need to be provided as a character string in this form:
+
+      (df = mtcars, smr = 'mpg', dsc = 'wt', dsc2 = 'hp')
+
+      "
+
+    ))
+
+  }
+
+
+  htmltools::tagList(
+
+    cronologia_dependency(),
+
+    timeline2(df,
+              smr,
+              dsc,
+              dsc2,
+              smr_col,
+              smr_bgcol,
+              dsc_col,
+              dsc_bgcol,
+              dsc_size,
+              dsc_col2,
+              dsc_bgcol2,
+              dsc_size2)
+
+  )
+
+}
+
+
