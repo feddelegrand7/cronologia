@@ -372,7 +372,7 @@ create_tml_img <- function(df,
 
 
 
-#' An internal function used to generate HTML tags for the timeline function
+#' An internal function used to generate HTML tags for the timeline2 function
 #' @noRd
 
 timeline2 <- function(df,
@@ -384,9 +384,9 @@ timeline2 <- function(df,
                      dsc_col,
                      dsc_bgcol,
                      dsc_size,
-                     dsc_col2,
-                     dsc_bgcol2,
-                     dsc_size2) {
+                     dsc2_col,
+                     dsc2_bgcol,
+                     dsc2_size) {
 
   func <- function(i, j, k) {
 
@@ -425,7 +425,7 @@ timeline2 <- function(df,
 
             style = glue::glue(
 
-              "color: {dsc_col2}; background: {dsc_bgcol2}; font-size: {dsc_size2};"
+              "color: {dsc2_col}; background: {dsc2_bgcol}; font-size: {dsc2_size};"
 
             )
 
@@ -460,15 +460,13 @@ timeline2 <- function(df,
 #' @param dsc_col text color for the first description component. Defaults to "#1D1D1D".
 #' @param dsc_bgcol background-color for the first description component. Defaults to "#FFFFFF".
 #' @param dsc_size font size of the first description component. Defaults to "14px".
-#' @param dsc_col2 text color for the second description component. Defaults to "#3AD900".
-#' @param dsc_bgcol2 background-color for the second description component. Defaults to "#FFFFFF".
-#' @param dsc_size2 font size of the second description component. Defaults to "14px".
+#' @param dsc2_col text color for the second description component. Defaults to "#3AD900".
+#' @param dsc2_bgcol background-color for the second description component. Defaults to "#FFFFFF".
+#' @param dsc2_size font size of the second description component. Defaults to "14px".
 #' @return A Vertical HTML Time Line Widget with 2 Description Levels
 #' @export
 #'
-#' @examples
-#'
-#'}
+
 
 
 create_tml_2 <- function(df,
@@ -480,9 +478,9 @@ create_tml_2 <- function(df,
                        dsc_col = "#1D1D1D",
                        dsc_bgcol = "#FFFFFF",
                        dsc_size = "14px",
-                       dsc_col2 = "#3AD900",
-                       dsc_bgcol2 = "#FFFFFF",
-                       dsc_size2 = "14px") {
+                       dsc2_col = "#1D1D1D",
+                       dsc2_bgcol = "#FFFFFF",
+                       dsc2_size = "14px") {
 
   if (any(!is.character(smr),
           !is.character(dsc),
@@ -492,9 +490,9 @@ create_tml_2 <- function(df,
           !is.character(dsc_col),
           !is.character(dsc_bgcol),
           !is.character(dsc_size),
-          !is.character(dsc_col2),
-          !is.character(dsc_bgcol2),
-          !is.character(dsc_size2))) {
+          !is.character(dsc2_col),
+          !is.character(dsc2_bgcol),
+          !is.character(dsc2_size))) {
 
 
     stop("All parameters except 'df' must be provided as a character string ! you're not in Tidyverse !!!")
@@ -532,9 +530,9 @@ create_tml_2 <- function(df,
               dsc_col,
               dsc_bgcol,
               dsc_size,
-              dsc_col2,
-              dsc_bgcol2,
-              dsc_size2)
+              dsc2_col,
+              dsc2_bgcol,
+              dsc2_size)
 
   )
 

@@ -74,9 +74,6 @@ You can easily customize the appearance of the time line using the
 parameters provided:
 
 ``` r
-library(cronologia)
-
-
 create_tml(df = batman_data,
            smr = "title", # summary
            dsc = "date_release", # description
@@ -142,6 +139,47 @@ create_tml_img(df,
 ```
 
 ![](man/figures/example3.gif)
+
+## `create_tml_2()`
+
+Following the idea of
+[Tobias](https://twitter.com/toeb18/status/1355104693299634181?s=20) for
+creating an interactive CV I thought that two (2) description components
+would be more appropriate. The function is similar to `create_tml()`
+except that it adds another description paragraph to the Timeline.
+
+Let’s go through an example:
+
+``` r
+cv <- data.frame(
+  
+  
+  jobs = c("Game tester at Nintendo", "Food tester at Ferrero", "Movies tester at Netflix"), 
+  
+  period = c("2020-2022", "2022-2024", "2026-2030"),
+  
+  todos = c("Playing Zelda all day", "Eating Bueno all day", "Watching the Office all day")
+  
+)
+
+
+cv
+#>                       jobs    period                       todos
+#> 1  Game tester at Nintendo 2020-2022       Playing Zelda all day
+#> 2   Food tester at Ferrero 2022-2024        Eating Bueno all day
+#> 3 Movies tester at Netflix 2026-2030 Watching the Office all day
+```
+
+``` r
+create_tml_2(cv, 
+             smr = "jobs", 
+             dsc = "period", 
+             dsc2 = "todos", 
+             dsc2_col = "white",
+             dsc2_bgcol = "peru") # yes, peru is a color
+```
+
+![](man/figures/example4.gif)
 
 # TODOS
 
