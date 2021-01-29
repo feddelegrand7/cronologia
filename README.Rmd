@@ -110,7 +110,7 @@ create_tml(df = batman_data,
 
 
 
-If you want to include images within your timeline, you can use the `create_tml_img()` function. To illustrate this function, we'll use the [radous](https://github.com/feddelegrand7/radous) package that fetch the [randomuser.me](https://randomuser.me/) API returns and returns a data frame that contains many information (including images' URLs).
+If you want to include images within your timeline, you can use the `create_tml_img()` function. To illustrate this function, we'll use the [radous](https://github.com/feddelegrand7/radous) package that fetch the [randomuser.me](https://randomuser.me/) API and returns a data frame that contains many information (including images' URLs).
 
 > Disclaimer: All the generated images are extracted from the authorized section of UI Faces. 
 
@@ -153,8 +153,9 @@ create_tml_img(df,
 
 # TODOS 
 
-- Writing unit tests 
-- Creating a hex sticker 
+- [x] Writing unit tests 
+- [ ] Creating a hex sticker 
+- [ ] Sharing with RWeekly
 
 
 

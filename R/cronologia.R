@@ -358,8 +358,8 @@ create_tml_img <- function(df,
              dsc_col,
              dsc_bgcol,
              dsc_size,
-             imgheight = imgheight,
-             imgwidth = imgwidth)
+             imgheight,
+             imgwidth)
 
   )
 
