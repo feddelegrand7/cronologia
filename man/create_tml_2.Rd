@@ -16,7 +16,8 @@ create_tml_2(
   dsc_size = "14px",
   dsc2_col = "#1D1D1D",
   dsc2_bgcol = "#FFFFFF",
-  dsc2_size = "14px"
+  dsc2_size = "14px",
+  open = FALSE
 )
 }
 \arguments{
@@ -43,6 +44,8 @@ create_tml_2(
 \item{dsc2_bgcol}{background-color for the second description component. Defaults to "#FFFFFF".}
 
 \item{dsc2_size}{font size of the second description component. Defaults to "14px".}
+
+\item{open}{logical, whether to open by default the summary components. Default to FALSE}
 }
 \value{
 A Vertical HTML Time Line Widget with 2 Description Levels

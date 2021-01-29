@@ -16,7 +16,8 @@ create_tml_img(
   dsc_bgcol = "#FFFFFF",
   dsc_size = "14px",
   imgheight = "150px",
-  imgwidth = "150px"
+  imgwidth = "150px",
+  open = FALSE
 )
 }
 \arguments{
@@ -43,6 +44,8 @@ create_tml_img(
 \item{imgheight}{the height of the image. Defaults to "150px".}
 
 \item{imgwidth}{the width of the image. Defaults to "150px".}
+
+\item{open}{logical, whether to open by default the summary components. Default to FALSE}
 }
 \value{
 A Vertical HTML Time Line Widget With Images
