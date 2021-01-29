@@ -230,9 +230,6 @@ timeline_img <- function(df,
             )
           ),
 
-          htmltools::tags$br(),
-
-
           htmltools::tags$img(
             src = n,
             alt = m,
@@ -241,6 +238,8 @@ timeline_img <- function(df,
           ),
 
           htmltools::tags$br(),
+          htmltools::tags$br(),
+
 
           htmltools::tags$p(
             j,
