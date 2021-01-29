@@ -176,7 +176,7 @@ create_tml_2(cv,
              dsc = "period", 
              dsc2 = "todos", 
              dsc2_col = "white",
-             dsc2_bgcol = "peru") # yes, peru is a color
+             dsc2_bgcol = "peru") # yes, peru is also a color
 ```
 
 ![](man/figures/example4.gif)
@@ -185,7 +185,8 @@ create_tml_2(cv,
 
 -   [x] Writing unit tests
 -   [ ] Creating a hex sticker
--   [ ] Sharing with RWeekly
+-   [x] Sharing with RWeekly
+-   [ ] Talk about it at a virtual event
 
 # Code of Conduct
 

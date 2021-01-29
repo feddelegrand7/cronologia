@@ -14,9 +14,9 @@ create_tml_2(
   dsc_col = "#1D1D1D",
   dsc_bgcol = "#FFFFFF",
   dsc_size = "14px",
-  dsc_col2 = "#3AD900",
-  dsc_bgcol2 = "#FFFFFF",
-  dsc_size2 = "14px"
+  dsc2_col = "#1D1D1D",
+  dsc2_bgcol = "#FFFFFF",
+  dsc2_size = "14px"
 )
 }
 \arguments{
@@ -38,11 +38,11 @@ create_tml_2(
 
 \item{dsc_size}{font size of the first description component. Defaults to "14px".}
 
-\item{dsc_col2}{text color for the second description component. Defaults to "#3AD900".}
+\item{dsc2_col}{text color for the second description component. Defaults to "#3AD900".}
 
-\item{dsc_bgcol2}{background-color for the second description component. Defaults to "#FFFFFF".}
+\item{dsc2_bgcol}{background-color for the second description component. Defaults to "#FFFFFF".}
 
-\item{dsc_size2}{font size of the second description component. Defaults to "14px".}
+\item{dsc2_size}{font size of the second description component. Defaults to "14px".}
 }
 \value{
 A Vertical HTML Time Line Widget with 2 Description Levels
