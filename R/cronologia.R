@@ -30,38 +30,75 @@ timeline <- function(df,
                      smr_bgcol,
                      dsc_col,
                      dsc_bgcol,
-                     dsc_size) {
+                     dsc_size,
+                     open) {
 
     func <- function(i, j) {
 
+    details <- if (open) {
+
+
+      htmltools::tags$details(
+
+        'open' = NA,
+
+        htmltools::tags$summary(
+          i,
+          style = glue::glue(
+
+            "color: {smr_col}; background: {smr_bgcol};"
+
+          )
+        ),
+
+        htmltools::tags$p(
+          j,
+
+          style = glue::glue(
+
+            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+          )
+
+        )
+      )
+
+
+    } else {
+
+
+      htmltools::tags$details(
+
+        htmltools::tags$summary(
+          i,
+          style = glue::glue(
+
+            "color: {smr_col}; background: {smr_bgcol};"
+
+          )
+        ),
+
+        htmltools::tags$p(
+          j,
+
+          style = glue::glue(
+
+            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+          )
+
+        )
+      )
+
+    }
 
         htmltools::tagList(
 
           htmltools::div(
             class = "chronologia-detail-wrapper",
 
-            htmltools::tags$details(
+            details
 
-              htmltools::tags$summary(
-                i,
-                style = glue::glue(
-
-                  "color: {smr_col}; background: {smr_bgcol};"
-
-                  )
-              ),
-
-              htmltools::tags$p(
-                j,
-
-                style = glue::glue(
-
-                  "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-                )
-
-                )
-            )
           )
         )
     }
@@ -89,6 +126,8 @@ timeline <- function(df,
 #' @param dsc_col text color for the description component. Defaults to "#1D1D1D".
 #' @param dsc_bgcol background-color for the description component. Defaults to "#FFFFFF".
 #' @param dsc_size font size of the description component. Defaults to "14px".
+#' @param open logical, whether to open by default the summary components. Default to FALSE
+#'
 #'
 #' @return A Vertical HTML Time Line Widget
 #' @export
@@ -140,7 +179,8 @@ create_tml <- function(df,
                        smr_bgcol =  "#002240",
                        dsc_col = "#1D1D1D",
                        dsc_bgcol = "#FFFFFF",
-                       dsc_size = "14px"
+                       dsc_size = "14px",
+                       open = FALSE
                       ) {
 
   if (any(!is.character(smr),
@@ -185,7 +225,8 @@ create_tml <- function(df,
              smr_bgcol,
              dsc_col,
              dsc_bgcol,
-             dsc_size)
+             dsc_size,
+             open)
 
   )
 
@@ -207,51 +248,101 @@ timeline_img <- function(df,
                      smr_bgcol,
                      dsc_col,
                      dsc_bgcol,
-                     dsc_size = "14px",
-                     imgheight = "400px",
-                     imgwidth = "400px") {
+                     dsc_size,
+                     imgheight,
+                     imgwidth,
+                     open) {
 
 
   func <- function(i, j, n, m) {
+
+
+   details <-  if (open) {
+
+      htmltools::tags$details(
+
+        "open" = NA,
+
+        htmltools::tags$summary(
+          i,
+          style = glue::glue(
+
+            "color: {smr_col}; background: {smr_bgcol};"
+
+          )
+        ),
+
+        htmltools::tags$img(
+          src = n,
+          alt = m,
+          height = imgheight,
+          width = imgwidth
+        ),
+
+        htmltools::tags$br(),
+        htmltools::tags$br(),
+
+
+        htmltools::tags$p(
+          j,
+
+          style = glue::glue(
+
+            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+          )
+
+        )
+      )
+
+
+    } else {
+
+
+      htmltools::tags$details(
+
+        htmltools::tags$summary(
+          i,
+          style = glue::glue(
+
+            "color: {smr_col}; background: {smr_bgcol};"
+
+          )
+        ),
+
+        htmltools::tags$img(
+          src = n,
+          alt = m,
+          height = imgheight,
+          width = imgwidth
+        ),
+
+        htmltools::tags$br(),
+        htmltools::tags$br(),
+
+
+        htmltools::tags$p(
+          j,
+
+          style = glue::glue(
+
+            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+          )
+
+        )
+      )
+
+    }
+
+
 
     htmltools::tagList(
 
       htmltools::div(
         class = "chronologia-detail-wrapper",
+        details
 
-        htmltools::tags$details(
-
-          htmltools::tags$summary(
-            i,
-            style = glue::glue(
-
-              "color: {smr_col}; background: {smr_bgcol};"
-
-            )
-          ),
-
-          htmltools::tags$img(
-            src = n,
-            alt = m,
-            height = imgheight,
-            width = imgwidth
-          ),
-
-          htmltools::tags$br(),
-          htmltools::tags$br(),
-
-
-          htmltools::tags$p(
-            j,
-
-            style = glue::glue(
-
-              "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-            )
-
-          )
-        )
       )
     )
   }
@@ -290,7 +381,8 @@ timeline_img <- function(df,
 #' @param dsc_size font size of the description component. Defaults to "14px".
 #' @param imgheight the height of the image. Defaults to "150px".
 #' @param imgwidth the width of the image. Defaults to "150px".
-#'
+#' @param open logical, whether to open by default the summary components. Default to FALSE
+
 #' @return A Vertical HTML Time Line Widget With Images
 #' @export
 
@@ -306,7 +398,8 @@ create_tml_img <- function(df,
                        dsc_bgcol = "#FFFFFF",
                        dsc_size = "14px",
                        imgheight = "150px",
-                       imgwidth = "150px") {
+                       imgwidth = "150px",
+                       open = FALSE) {
 
 
   if (any(!is.character(smr),
@@ -359,7 +452,8 @@ create_tml_img <- function(df,
              dsc_bgcol,
              dsc_size,
              imgheight,
-             imgwidth)
+             imgwidth,
+             open)
 
   )
 
@@ -386,9 +480,92 @@ timeline2 <- function(df,
                      dsc_size,
                      dsc2_col,
                      dsc2_bgcol,
-                     dsc2_size) {
+                     dsc2_size,
+                     open) {
 
   func <- function(i, j, k) {
+
+  details <-   if (open) {
+
+    htmltools::tags$details(
+
+      "open" = NA,
+
+      htmltools::tags$summary(
+        i,
+        style = glue::glue(
+
+          "color: {smr_col}; background: {smr_bgcol};"
+
+        )
+      ),
+
+      htmltools::tags$p(
+        j,
+
+        style = glue::glue(
+
+          "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+        )
+
+      ),
+
+
+      htmltools::tags$p(
+
+        k,
+
+        style = glue::glue(
+
+          "color: {dsc2_col}; background: {dsc2_bgcol}; font-size: {dsc2_size};"
+
+        )
+
+
+      )
+    )
+
+  } else {
+
+    htmltools::tags$details(
+
+      htmltools::tags$summary(
+        i,
+        style = glue::glue(
+
+          "color: {smr_col}; background: {smr_bgcol};"
+
+        )
+      ),
+
+      htmltools::tags$p(
+        j,
+
+        style = glue::glue(
+
+          "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+        )
+
+      ),
+
+
+      htmltools::tags$p(
+
+        k,
+
+        style = glue::glue(
+
+          "color: {dsc2_col}; background: {dsc2_bgcol}; font-size: {dsc2_size};"
+
+        )
+
+
+      )
+    )
+
+    }
 
 
     htmltools::tagList(
@@ -396,42 +573,9 @@ timeline2 <- function(df,
       htmltools::div(
         class = "chronologia-detail-wrapper",
 
-        htmltools::tags$details(
-
-          htmltools::tags$summary(
-            i,
-            style = glue::glue(
-
-              "color: {smr_col}; background: {smr_bgcol};"
-
-            )
-          ),
-
-          htmltools::tags$p(
-            j,
-
-            style = glue::glue(
-
-              "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-            )
-
-          ),
+        details
 
 
-          htmltools::tags$p(
-
-            k,
-
-            style = glue::glue(
-
-              "color: {dsc2_col}; background: {dsc2_bgcol}; font-size: {dsc2_size};"
-
-            )
-
-
-          )
-        )
       )
     )
   }
@@ -463,6 +607,8 @@ timeline2 <- function(df,
 #' @param dsc2_col text color for the second description component. Defaults to "#3AD900".
 #' @param dsc2_bgcol background-color for the second description component. Defaults to "#FFFFFF".
 #' @param dsc2_size font size of the second description component. Defaults to "14px".
+#' @param open logical, whether to open by default the summary components. Default to FALSE
+
 #' @return A Vertical HTML Time Line Widget with 2 Description Levels
 #' @export
 #'
@@ -480,7 +626,8 @@ create_tml_2 <- function(df,
                        dsc_size = "14px",
                        dsc2_col = "#1D1D1D",
                        dsc2_bgcol = "#FFFFFF",
-                       dsc2_size = "14px") {
+                       dsc2_size = "14px",
+                       open = FALSE) {
 
   if (any(!is.character(smr),
           !is.character(dsc),
@@ -532,7 +679,8 @@ create_tml_2 <- function(df,
               dsc_size,
               dsc2_col,
               dsc2_bgcol,
-              dsc2_size)
+              dsc2_size,
+              open)
 
   )
 

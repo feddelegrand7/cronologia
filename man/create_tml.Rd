@@ -12,7 +12,8 @@ create_tml(
   smr_bgcol = "#002240",
   dsc_col = "#1D1D1D",
   dsc_bgcol = "#FFFFFF",
-  dsc_size = "14px"
+  dsc_size = "14px",
+  open = FALSE
 )
 }
 \arguments{
@@ -31,6 +32,8 @@ create_tml(
 \item{dsc_bgcol}{background-color for the description component. Defaults to "#FFFFFF".}
 
 \item{dsc_size}{font size of the description component. Defaults to "14px".}
+
+\item{open}{logical, whether to open by default the summary components. Default to FALSE}
 }
 \value{
 A Vertical HTML Time Line Widget
