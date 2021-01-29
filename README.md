@@ -24,8 +24,8 @@ remotes::install_github("feddelegrand7/cronologia")
 
 The `cronologia` package has two function:
 
--   `create_tml()` : used to create simple text-based time lines.
--   `create_tml_img()`: used to create time lines that include images.
+-   `create_tml()` : used to create simple text-based timelines.
+-   `create_tml_img()`: used to create timelines that include images.
 
 # Examples
 
