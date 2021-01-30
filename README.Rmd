@@ -103,7 +103,7 @@ create_tml(df = batman_data,
 ![](man/figures/example2.gif)
 
 
-### `r emo::ji("exclamation")`
+### `r paste0(emo::ji("exclamation"), emo::ji("exclamation"), emo::ji("exclamation")) `
 
 If you want to make all the summary components open by default, you can set the `open` parameter to `TRUE`. The parameter is available in all the functions.  
 

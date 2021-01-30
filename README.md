@@ -87,7 +87,7 @@ create_tml(df = batman_data,
 
 ![](man/figures/example2.gif)
 
-### ❗
+### ❗❗❗
 
 If you want to make all the summary components open by default, you can
 set the `open` parameter to `TRUE`. The parameter is available in all
