@@ -33,62 +33,46 @@ timeline <- function(df,
                      dsc_size,
                      open) {
 
+
+
+
     func <- function(i, j) {
+
+
+    det <-  htmltools::tags$details(
+
+        htmltools::tags$summary(
+          i,
+          style = glue::glue(
+
+            "color: {smr_col}; background: {smr_bgcol};"
+
+          )
+        ),
+
+        htmltools::tags$p(
+          j,
+
+          style = glue::glue(
+
+            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+          )
+
+        )
+      )
+
+
 
     details <- if (open) {
 
 
-      htmltools::tags$details(
-
-        'open' = NA,
-
-        htmltools::tags$summary(
-          i,
-          style = glue::glue(
-
-            "color: {smr_col}; background: {smr_bgcol};"
-
-          )
-        ),
-
-        htmltools::tags$p(
-          j,
-
-          style = glue::glue(
-
-            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-          )
-
-        )
-      )
+      htmltools::tagAppendAttributes(det, "open" = NA)
 
 
     } else {
 
-
-      htmltools::tags$details(
-
-        htmltools::tags$summary(
-          i,
-          style = glue::glue(
-
-            "color: {smr_col}; background: {smr_bgcol};"
-
-          )
-        ),
-
-        htmltools::tags$p(
-          j,
-
-          style = glue::glue(
-
-            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-          )
-
-        )
-      )
+      det
 
     }
 
@@ -254,87 +238,59 @@ timeline_img <- function(df,
                      open) {
 
 
+
+
+
+
   func <- function(i, j, n, m) {
+
+
+    det <- htmltools::tags$details(
+
+      htmltools::tags$summary(
+        i,
+        style = glue::glue(
+
+          "color: {smr_col}; background: {smr_bgcol};"
+
+        )
+      ),
+
+      htmltools::tags$img(
+        src = n,
+        alt = m,
+        height = imgheight,
+        width = imgwidth
+      ),
+
+      htmltools::tags$br(),
+      htmltools::tags$br(),
+
+
+      htmltools::tags$p(
+        j,
+
+        style = glue::glue(
+
+          "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
+
+        )
+
+      )
+    )
 
 
    details <-  if (open) {
 
-      htmltools::tags$details(
 
-        "open" = NA,
-
-        htmltools::tags$summary(
-          i,
-          style = glue::glue(
-
-            "color: {smr_col}; background: {smr_bgcol};"
-
-          )
-        ),
-
-        htmltools::tags$img(
-          src = n,
-          alt = m,
-          height = imgheight,
-          width = imgwidth
-        ),
-
-        htmltools::tags$br(),
-        htmltools::tags$br(),
-
-
-        htmltools::tags$p(
-          j,
-
-          style = glue::glue(
-
-            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-          )
-
-        )
-      )
+     htmltools::tagAppendAttributes(det, "open" = NA)
 
 
     } else {
 
-
-      htmltools::tags$details(
-
-        htmltools::tags$summary(
-          i,
-          style = glue::glue(
-
-            "color: {smr_col}; background: {smr_bgcol};"
-
-          )
-        ),
-
-        htmltools::tags$img(
-          src = n,
-          alt = m,
-          height = imgheight,
-          width = imgwidth
-        ),
-
-        htmltools::tags$br(),
-        htmltools::tags$br(),
-
-
-        htmltools::tags$p(
-          j,
-
-          style = glue::glue(
-
-            "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-          )
-
-        )
-      )
+        det
 
     }
-
 
 
     htmltools::tagList(
@@ -485,11 +441,7 @@ timeline2 <- function(df,
 
   func <- function(i, j, k) {
 
-  details <-   if (open) {
-
-    htmltools::tags$details(
-
-      "open" = NA,
+    det <-   htmltools::tags$details(
 
       htmltools::tags$summary(
         i,
@@ -525,45 +477,17 @@ timeline2 <- function(df,
 
       )
     )
+
+
+
+  details <-   if (open) {
+
+    htmltools::tagAppendAttributes(det, "open" = NA)
+
 
   } else {
 
-    htmltools::tags$details(
-
-      htmltools::tags$summary(
-        i,
-        style = glue::glue(
-
-          "color: {smr_col}; background: {smr_bgcol};"
-
-        )
-      ),
-
-      htmltools::tags$p(
-        j,
-
-        style = glue::glue(
-
-          "color: {dsc_col}; background: {dsc_bgcol}; font-size: {dsc_size};"
-
-        )
-
-      ),
-
-
-      htmltools::tags$p(
-
-        k,
-
-        style = glue::glue(
-
-          "color: {dsc2_col}; background: {dsc2_bgcol}; font-size: {dsc2_size};"
-
-        )
-
-
-      )
-    )
+    det
 
     }
 
