@@ -6,7 +6,7 @@ Author: Mohamed El Fodil Ihaddaden
 Maintainer: Mohamed El Fodil Ihaddaden <ihaddaden.fodeil@gmail.com>
 Description: Creates an HTML vertical timeline from a data frame as an input for
     'rmarkdown' documents and 'shiny' applications.
-License: GPL (>= 3)
+License: AGPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Imports: 
