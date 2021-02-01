@@ -9,3 +9,4 @@
 ^\.github$
 ^codecov\.yml$
 ^man/figures/example4\.gif$
+^cran-comments\.md$
