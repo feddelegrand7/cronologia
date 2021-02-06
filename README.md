@@ -31,6 +31,7 @@ The `cronologia` package has two function:
 
 -   `create_tml()` : used to create simple text-based timelines.
 -   `create_tml_img()`: used to create timelines that include images.
+-   `create_tml_2()`: similar to `create_tml()` except that it can handle two summary components.
 
 # Examples
 
