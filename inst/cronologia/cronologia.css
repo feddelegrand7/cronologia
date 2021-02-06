@@ -1,1 +1,89 @@
-@import url(https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap);.chronologia-wrapper{width:50vw;margin:0 auto;text-align:center;line-height:1.5;position:relative;font-family:'Titillium Web',sans-serif}.chronologia-detail-wrapper{width:100%;margin-bottom:100px;display:flex}details{width:50%}summary{font-size:22px;font-weight:900;padding:15px;margin-bottom:15px;border-radius:5px;text-align:left;transition:all .5s ease-in-out;cursor:pointer;outline-color:#324c63}details[open] summary{margin-bottom:25px}.chronologia-wrapper>.chronologia-detail-wrapper:nth-child(even){justify-content:flex-end;padding-left:100px}.chronologia-wrapper>.chronologia-detail-wrapper:not(:nth-child(even)){justify-content:flex-start;padding-right:100px}.chronologia-detail-wrapper::before{content:"";width:3px;background-color:#d9d9d9;position:absolute;top:0;bottom:0;left:50%}.chronologia-wrapper p{font-weight:bolder;font-size:16px}.chronologia-detail-wrapper details img{border-radius:20px}
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
+
+.chronologia-wrapper {
+  width: 50vw;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  line-height: 1.5;
+
+  position: relative;
+
+  font-family: "Titillium Web", sans-serif;
+}
+
+.chronologia-detail-wrapper {
+  width: 100%;
+
+  margin-bottom: 100px;
+
+  display: flex;
+}
+
+details {
+  width: 50%;
+}
+
+summary {
+  font-size: 22px;
+
+  font-weight: 900;
+
+  padding: 15px;
+
+  margin-bottom: 15px;
+
+  border-radius: 5px;
+
+  text-align: left;
+
+  transition: all 0.5s ease-in-out;
+
+  cursor: pointer;
+
+  outline-color: #324c63;
+}
+
+details[open] summary {
+  margin-bottom: 25px;
+}
+
+.chronologia-wrapper > .chronologia-detail-wrapper:nth-child(even) {
+  justify-content: flex-end;
+
+  padding-left: 100px;
+}
+
+.chronologia-wrapper > .chronologia-detail-wrapper:not(:nth-child(even)) {
+  justify-content: flex-start;
+
+  padding-right: 100px;
+}
+
+.chronologia-detail-wrapper::before {
+  content: "";
+
+  width: 3px;
+
+  background-color: #d9d9d9;
+
+  position: absolute;
+
+  top: 0;
+
+  bottom: 0;
+
+  left: 50%;
+}
+
+.chronologia-wrapper p {
+  font-weight: bolder;
+
+  font-size: 16px;
+}
+
+.chronologia-detail-wrapper details img {
+  border-radius: 20px;
+}
