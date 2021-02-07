@@ -10,6 +10,14 @@
 coverage](https://codecov.io/gh/feddelegrand7/cronologia/branch/master/graph/badge.svg)](https://codecov.io/gh/feddelegrand7/cronologia?branch=master)
 [![License: AGPL
 v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/cronologia)](https://CRAN.R-project.org/package=cronologia)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/cronologia)](https://cran.r-project.org/package=cronologia)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/cronologia)](https://cran.r-project.org/package=cronologia)
+[![R
+badge](https://img.shields.io/badge/Build%20with-♥%20and%20R-violet)](https://github.com/feddelegrand7/cronologia)
 
 <!-- badges: end -->
 
@@ -31,7 +39,6 @@ The `cronologia` package has two function:
 
 -   `create_tml()` : used to create simple text-based timelines.
 -   `create_tml_img()`: used to create timelines that include images.
--   `create_tml_2()`: similar to `create_tml()` except that it can handle two summary components.
 
 # Examples
 
