@@ -34,7 +34,7 @@ install.packages('cronologia')
 
 # Introduction
 
-The `cronologia` package has two function:
+The `cronologia` package has three functions:
 
 -   `create_tml()` : used to create simple text-based timelines.
 -   `create_tml_img()`: used to create timelines that include images.
