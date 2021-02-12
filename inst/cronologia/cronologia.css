@@ -27,7 +27,7 @@ details {
 }
 
 summary {
-  font-size: 22px;
+  font-size: 20px;
 
   font-weight: 900;
 
@@ -37,7 +37,7 @@ summary {
 
   border-radius: 5px;
 
-  text-align: left;
+  text-align: center;
 
   transition: all 0.5s ease-in-out;
 
@@ -86,4 +86,54 @@ details[open] summary {
 
 .chronologia-detail-wrapper details img {
   border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  .chronologia-wrapper > .chronologia-detail-wrapper:nth-child(even) {
+    justify-content: flex-end;
+
+    padding-left: 50px;
+  }
+
+  .chronologia-wrapper > .chronologia-detail-wrapper:not(:nth-child(even)) {
+    justify-content: flex-start;
+    padding-right: 50px;
+  }
+
+  summary {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    outline-color: #324c63;
+  }
+}
+
+@media (max-width: 600px) {
+  .chronologia-wrapper > .chronologia-detail-wrapper:nth-child(even) {
+    justify-content: flex-end;
+
+    padding-left: 15px;
+  }
+
+  .chronologia-wrapper > .chronologia-detail-wrapper:not(:nth-child(even)) {
+    justify-content: flex-start;
+    padding-right: 15px;
+  }
+
+  summary {
+    font-size: 14px;
+    font-weight: 900;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    outline-color: #324c63;
+  }
 }

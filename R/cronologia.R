@@ -13,7 +13,7 @@ cronologia_dependency <- function() {
 
     src = c(file = "cronologia"),
 
-    stylesheet = "cronologia.min.css",
+    stylesheet = "cronologia.css",
 
     all_files = FALSE
 
