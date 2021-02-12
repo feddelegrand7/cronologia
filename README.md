@@ -26,10 +26,12 @@ RMarkdown documents and Shiny applications.
 
 ## Installation
 
-You can install `cronologia` from CRAN with:
+You can install the stable version which is available on CRAN however,
+for now you should install the development version as it has support for
+smaller devices responsiveness:
 
 ``` r
-install.packages('cronologia')
+remotes::install_github("feddelegrand7/cronologia")
 ```
 
 # Introduction
@@ -38,7 +40,8 @@ The `cronologia` package has three functions:
 
 -   `create_tml()` : used to create simple text-based timelines.
 -   `create_tml_img()`: used to create timelines that include images.
--   `create_tml_2()`: is equivalent to `create_tml()` except that it adds an additional description component.
+-   `create_tml_2()`: works the same way as `create_tml()` except that
+    it adds and additional description component.
 
 # Examples
 
