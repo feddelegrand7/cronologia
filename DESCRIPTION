@@ -8,7 +8,6 @@ Description: Creates an HTML vertical timeline from a data frame as an input for
     'rmarkdown' documents and 'shiny' applications.
 License: AGPL (>= 3)
 Encoding: UTF-8
-LazyData: true
 Imports: 
     htmltools,
     glue
