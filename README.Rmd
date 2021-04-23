@@ -33,11 +33,11 @@ The goal of `cronologia` is to create an interactive timeline widget in RMarkdow
 
 ## Installation
 
-You can install the stable version which is available on CRAN however, for now you should install the development version as it has support for smaller devices responsiveness: 
+You can install the stable version from CRAN with
 
 ```{r, eval=FALSE}
 
-remotes::install_github("feddelegrand7/cronologia")
+install.packages("cronologia")
 
 ```
 

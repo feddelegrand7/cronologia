@@ -26,12 +26,10 @@ RMarkdown documents and Shiny applications.
 
 ## Installation
 
-You can install the stable version which is available on CRAN however,
-for now you should install the development version as it has support for
-smaller devices responsiveness:
+You can install the stable version from CRAN with
 
 ``` r
-remotes::install_github("feddelegrand7/cronologia")
+install.packages("cronologia")
 ```
 
 # Introduction
